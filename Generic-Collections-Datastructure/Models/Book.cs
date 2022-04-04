@@ -10,11 +10,17 @@ namespace Generic_Collections_Datastructure.Models
     {
         public string AuthorName;
         public int PageCount;
-       public Book(int totalincome, string name, int price, int count, string authorname, int pagecount):base(totalincome, name, price, count)
+       public Book(string name, int price,string authorname, int pagecount):base(name, price)
         {
             AuthorName = authorname;
             PageCount = pagecount;
         }
+        public override void Sell()
+        {
+            Count--;
+            TotalInCome++;
+        }
+        
         public override void ShowInfo()
         {
             
@@ -26,6 +32,7 @@ namespace Generic_Collections_Datastructure.Models
                               $"Author name: {AuthorName}\n" +
                               $"Page Count: {PageCount}");
         }
+        
 
     }
 }

@@ -8,21 +8,18 @@ namespace Generic_Collections_Datastructure
     {
         static void Main(string[] args)
         {
-            
-            int totalincome = 15;
             string name = "asd";
             int price = 123;
-            int count = 22;
             string authorname = "Fd";
             int pagecount = 20;
 
-            Book book = new Book(totalincome, name, price, count, authorname, pagecount);
-            
-            book.ShowInfo();
+            Book book1 = new Book(name, price, authorname, pagecount);
+            book1.Sell();
+            book1.ShowInfo();
 
-            Book book2 = new Book(totalincome, name, price, count, authorname, pagecount);
-            
-            book.ShowInfo();
+            Book book2 = new Book(name, price, authorname, pagecount);
+            book2.Sell();
+            book2.ShowInfo();
         }
     }
 }
