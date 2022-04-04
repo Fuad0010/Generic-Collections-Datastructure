@@ -8,7 +8,7 @@ namespace Generic_Collections_Datastructure.Models
     abstract class Product
     {
         static private int _id;
-        public int Id 
+        public static int Id 
         { 
             get 
             { 
@@ -16,7 +16,7 @@ namespace Generic_Collections_Datastructure.Models
             }
             set 
             {
-                value++;
+              
                 _id = value; 
             }
         }
@@ -40,12 +40,16 @@ namespace Generic_Collections_Datastructure.Models
         
         public Product(int totalincome, string name, int price, int count)
         {
+            Id++;
             TotalInCome = totalincome;
             Name = name;
             Price = price;
             Count = count;
         }
         public abstract void ShowInfo();
+        
+            
+
         
     }
 

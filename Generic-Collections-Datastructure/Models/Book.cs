@@ -18,6 +18,13 @@ namespace Generic_Collections_Datastructure.Models
         public override void ShowInfo()
         {
             
+            Console.WriteLine($"Id: {Id}\n"+
+                              $"Name: {Name}\n" +
+                              $"Price: {Price}\n" +
+                              $"Count: {Count}\n" +
+                              $"Total In Come {TotalInCome}\n"+
+                              $"Author name: {AuthorName}\n" +
+                              $"Page Count: {PageCount}");
         }
 
     }
